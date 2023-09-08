@@ -1,0 +1,29 @@
+Chapters:
+
+1. Introduction
+2. Variables and Datatypes
+3. Operators
+4. Control Flow
+5. Functions
+6. Arrays
+7. Objects
+8. Classes
+9. Document Object Model (DOM)
+10. Events
+11. HTTP
+12. JSON
+
+Overview:
+
+JavaScript is a Scripting language that is used to make web pages interactive. It is a high-level, interpreted, and dynamic programming language. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+
+Some Javascript's Interpreters are:
+
+1. Chrome V8
+2. Mozilla SpiderMonkey
+3. Microsoft Chakra
+4. Apple JavaScriptCore
+5. Brave Muon
+6. Opera Carakan
+
+JavaScript is a single-threaded language, meaning only one task can be executed at a time. The browser provides a runtime environment for JavaScript. JavaScript can call itself asynchronously, meaning that other tasks can continue while the JavaScript is executing.
