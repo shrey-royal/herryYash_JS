@@ -1,0 +1,28 @@
+In JavaScript, functions are of the type Object. They can be assigned properties and have properties of their own. Every function has a property called prototype. This property is an object which has a constructor property by default. The constructor property points back to the function on which prototype object is a property. We can use this constructor property to create new objects of the same type.
+
+Types of Functions:
+
+1. Named Function
+2. Anonymous Function
+3. Immediately Invoked Function Expression (IIFE)
+4. Arrow Function
+8. Higher Order Function
+9. Recursive Function
+
+> Named Function:
+    > A function with a name is called a named function. It is the most common type of function. It can be defined using function keyword and can be called using the function name.
+
+> Anonymous Function:
+    > A function without a name is called an anonymous function. It can be defined using function keyword or using the arrow function syntax. It can be called using the variable name to which it is assigned.
+
+> Immediately Invoked Function Expression (IIFE):
+    > An anonymous function can be called as soon as it is defined by enclosing it in parentheses followed by a pair of parentheses which contains the function arguments (if any). This is called an Immediately Invoked Function Expression or IIFE.
+
+> Arrow Function:
+    > An arrow function is a shorter syntax for a function expression and does not have its own this, arguments, super, or new.target. These functions are best suited for non-method functions, and they cannot be used as constructors.
+
+> Higher Order Function:
+    > A higher order function is a function that takes another function as an argument, or returns a function. Higher order function is a result of functional programming. It allows us to write more generic code, which can be easily reused.
+
+> Recursive Function:
+    > A recursive function is a function that calls itself. It is used to solve problems that contain smaller sub-problems. It is best suited for tasks that can be defined in terms of similar sub-tasks.
