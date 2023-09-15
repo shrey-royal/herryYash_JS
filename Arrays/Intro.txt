@@ -1,0 +1,29 @@
+Arrays in JS:
+Syntax: 
+
+var array_name = [item1, item2, ...]; --> 1d
+var array_name = [[item1,item2,item3],[item4,item5,item6],...]; --> 2d
+var array_name = [[[item1,item2,item3],[item4,item5,item6]],[[item7,item8,item9],[item10,item11,item12]],...]; --> 3d
+
+Accessing elements in an array:
+Syntax:
+
+array_name[index]; --> 1d
+array_name[index1][index2]; --> 2d
+array_name[index1][index2][index3]; --> 3d
+
+
+Methods of array:
+
+Array length
+Array toString()
+Array pop()
+Array push()
+Array shift()
+Array unshift()
+Array join()
+Array delete()
+Array concat()
+Array flat()
+Array splice()
+Array slice()
