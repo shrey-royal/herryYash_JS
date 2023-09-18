@@ -1,0 +1,51 @@
+Sure, here are 20 basic JavaScript problem statements covering the topics of Introduction, Variables and Datatypes, Operators, Control Flow, Functions, and Arrays:
+
+**Introduction:**
+
+1. Create a JavaScript program that displays "Hello, World!" in the console.
+2. Write a program that prompts the user for their name and then displays a greeting message with their name.
+3. Calculate the sum of two numbers entered by the user and display the result.
+4. Create a program that checks if a given number is even or odd and displays a message accordingly.
+5. Write a JavaScript program that converts temperature from Celsius to Fahrenheit.
+
+**Variables and Datatypes:**
+
+6. Declare a variable and store your age in it. Display the age in the console.
+7. Create a variable to store your name and another variable to store your favorite color. Display a message that includes both in the console.
+8. Calculate the area of a rectangle with given length and width, storing the result in a variable.
+9. Declare a variable with a boolean value and display it in the console.
+10. Create a program that calculates the average of three test scores using variables and displays the result.
+
+**Operators:**
+
+11. Write a program that calculates the area of a circle using the radius entered by the user.
+12. Create a program that checks if a given number is divisible by 3 and 5 and displays a message accordingly.
+13. Calculate the square of a number and then take the square root of the result.
+14. Use the comparison operators to compare two numbers and display whether they are equal or not.
+15. Write a program that converts minutes to hours and minutes, displaying both values.
+
+**Control Flow:**
+
+16. Write a JavaScript program that checks if a user's age is eligible to vote (18 years or older) and displays a message accordingly.
+17. Create a program that determines whether a year entered by the user is a leap year or not.
+18. Implement a simple guessing game where the user has to guess a random number between 1 and 10.
+19. Write a program that checks if a given number is positive, negative, or zero and displays a message accordingly.
+20. Create a program that takes a day of the week as input and displays whether it's a weekday or a weekend day.
+
+**Functions:**
+
+21. Define a function that calculates the area of a triangle given its base and height as arguments.
+22. Write a function that takes two numbers as input and returns their sum.
+23. Create a function that checks if a number is prime or not and returns true or false.
+24. Define a function that calculates the factorial of a given number.
+25. Implement a function that generates a random number between two given values.
+
+**Arrays:**
+
+26. Create an array of your favorite colors and display them in the console.
+27. Write a program that finds the maximum number in an array of numbers.
+28. Define a function that reverses the elements of an array.
+29. Create an array of names and check if a given name exists in the array.
+30. Write a program that calculates the sum of all the numbers in an array.
+
+These problem statements should help you practice and understand the basics of JavaScript. You can use them to build your coding skills in JavaScript.
