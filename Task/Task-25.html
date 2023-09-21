@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-25</title>
+</head>
+<body>
+    <script>
+        function getRandomNumber(min, max) {
+            if(typeof min !== "number" || typeof max !== "number") {
+                throw new Error('Invalid input. Please enter a number.');
+            }
+
+            if (min > max) {
+                throw new Error('Invalid input. Minimum number cannot be greater than maximum number.');
+            }
+
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        console.log("Random number between 1 and 10: " + getRandomNumber(10, 15));
+    </script>
+</body>
+</html>

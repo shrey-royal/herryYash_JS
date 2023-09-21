@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-18</title>
+</head>
+<body>
+    <script>
+        //Implement a simple guessing game where the user has to guess a random number between 1 and 10.
+
+        const randomNumber = Math.floor(Math.random() * 10) + 1
+        let attempts = 38
+        
+
+        console.log("Welcome to the nnumber Guessing Game!");
+        console.log("You have " + attempts + " attempts to guess the number between 1 and 10")
+
+        while(1) {
+            const userGuess = parseInt(prompt("Enter a number between 1 and 10"))
+
+            if(isNaN(userGuess) || userGuess < 1 || userGuess > 10){
+                alert("Invalid input. Please enter a number between 1 and 10")
+                continue;
+            }
+
+            attempts--
+
+            if(userGuess === randomNumber) {
+                console.log("Congratulations! You guessed the correct number!")
+                break;
+            } else if(attempts === 0) {
+                console.log("Sorry! You have run out of attempts. The correct number was " + randomNumber)
+                break;
+            } else {
+                console.log("Sorry! Wrong number. You have " + attempts + " attempts left")
+            }
+        }
+
+    </script>
+</body>
+</html>

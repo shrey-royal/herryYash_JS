@@ -1,6 +1,6 @@
 Sure, here are 20 basic JavaScript problem statements covering the topics of Introduction, Variables and Datatypes, Operators, Control Flow, Functions, and Arrays:
 
-**Introduction:**
+Introduction:
 
 1. Create a JavaScript program that displays "Hello, World!" in the console.
 2. Write a program that prompts the user for their name and then displays a greeting message with their name.
@@ -8,7 +8,7 @@ Sure, here are 20 basic JavaScript problem statements covering the topics of Int
 4. Create a program that checks if a given number is even or odd and displays a message accordingly.
 5. Write a JavaScript program that converts temperature from Celsius to Fahrenheit.
 
-**Variables and Datatypes:**
+Variables and Datatypes:
 
 6. Declare a variable and store your age in it. Display the age in the console.
 7. Create a variable to store your name and another variable to store your favorite color. Display a message that includes both in the console.
@@ -16,7 +16,7 @@ Sure, here are 20 basic JavaScript problem statements covering the topics of Int
 9. Declare a variable with a boolean value and display it in the console.
 10. Create a program that calculates the average of three test scores using variables and displays the result.
 
-**Operators:**
+Operators:
 
 11. Write a program that calculates the area of a circle using the radius entered by the user.
 12. Create a program that checks if a given number is divisible by 3 and 5 and displays a message accordingly.
@@ -24,7 +24,7 @@ Sure, here are 20 basic JavaScript problem statements covering the topics of Int
 14. Use the comparison operators to compare two numbers and display whether they are equal or not.
 15. Write a program that converts minutes to hours and minutes, displaying both values.
 
-**Control Flow:**
+Control Flow:
 
 16. Write a JavaScript program that checks if a user's age is eligible to vote (18 years or older) and displays a message accordingly.
 17. Create a program that determines whether a year entered by the user is a leap year or not.
@@ -32,7 +32,7 @@ Sure, here are 20 basic JavaScript problem statements covering the topics of Int
 19. Write a program that checks if a given number is positive, negative, or zero and displays a message accordingly.
 20. Create a program that takes a day of the week as input and displays whether it's a weekday or a weekend day.
 
-**Functions:**
+Functions:
 
 21. Define a function that calculates the area of a triangle given its base and height as arguments.
 22. Write a function that takes two numbers as input and returns their sum.
@@ -40,7 +40,7 @@ Sure, here are 20 basic JavaScript problem statements covering the topics of Int
 24. Define a function that calculates the factorial of a given number.
 25. Implement a function that generates a random number between two given values.
 
-**Arrays:**
+Arrays:
 
 26. Create an array of your favorite colors and display them in the console.
 27. Write a program that finds the maximum number in an array of numbers.
@@ -49,3 +49,83 @@ Sure, here are 20 basic JavaScript problem statements covering the topics of Int
 30. Write a program that calculates the sum of all the numbers in an array.
 
 These problem statements should help you practice and understand the basics of JavaScript. You can use them to build your coding skills in JavaScript.
+
+
+Array tasks:
+
+1. Array Sum: Write a function that calculates and returns the sum of all elements in an array of numbers.
+
+2. Array Length: Create a function that returns the length (number of elements) of an array.
+
+3. Find Maximum Value: Implement a function that finds and returns the maximum value in an array of numbers.
+
+4. Find Minimum Value: Write a function that finds and returns the minimum value in an array of numbers.
+
+5. Array Reversal: Create a function that reverses the order of elements in an array and returns the reversed array.
+
+6. Array Joining: Write a function that joins the elements of an array into a single string, separated by a specified delimiter.
+
+7. Array Copy: Implement a function that copies all elements from one array to another and returns the new array.
+
+8. Array Filtering: Create a function that filters out even numbers from an array of integers, returning a new array with only the odd numbers.
+
+9. Array Element Search: Write a function that checks if a specific element exists in an array and returns true if found, or false if not found.
+
+10. Array Sorting: Implement a function that sorts an array of strings in alphabetical order and returns the sorted array.
+
+Test Cases:
+
+1. Array Sum:
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(arraySum(numbers)); // Should output 15
+
+2. Array Length:
+
+const fruits = ['apple', 'banana', 'cherry'];
+console.log(arrayLength(fruits)); // Should output 3
+
+3. Find Maximum Value:
+
+const values = [17, 8, 42, 3, 56];
+console.log(findMaxValue(values)); // Should output 56
+
+4. Find Minimum Value:
+
+const values = [17, 8, 42, 3, 56];
+console.log(findMinValue(values)); // Should output 3
+
+5. Array Reversal:
+
+const originalArray = [1, 2, 3, 4, 5];
+const reversedArray = reverseArray(originalArray);
+console.log(reversedArray); // Should output [5, 4, 3, 2, 1]
+
+6. Array Joining:
+
+const words = ['Hello', 'World', '!'];
+console.log(joinArray(words, ' ')); // Should output 'Hello World !'
+
+7. Array Copy:
+
+const sourceArray = [1, 2, 3];
+const copiedArray = copyArray(sourceArray);
+console.log(copiedArray); // Should output [1, 2, 3]
+
+8. Array Filtering (Odd Numbers):
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const filteredNumbers = filterOddNumbers(numbers);
+console.log(filteredNumbers); // Should output [1, 3, 5]
+
+9. Array Element Search:
+
+const colors = ['red', 'green', 'blue'];
+console.log(isElementInArray(colors, 'green')); // Should output true
+console.log(isElementInArray(colors, 'yellow')); // Should output false
+
+10. Array Sorting:
+
+const fruits = ['banana', 'apple', 'cherry'];
+const sortedFruits = sortArray(fruits);
+console.log(sortedFruits); // Should output ['apple', 'banana', 'cherry']
