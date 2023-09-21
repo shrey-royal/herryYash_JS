@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // let person = "Yash Soni"
+        // console.log(person);
+
+        //creating object using object literal
+        // person = {
+        //     name: "Yash Soni",
+        //     age: 20,
+        //     isAdult: true,
+        //     address: {
+        //         street: "123 Street",
+        //         city: "Ahmedabad",
+        //         state: "Gujarat"
+        //     },
+        //     hobbies: ["Music", "Cricket", "Reading"],
+        //     greet: function() {
+        //         console.log("Hello");
+        //     }
+        // }
+        // console.log(person);
+        
+        //creating object using new keyword
+        // person = new Object();
+        // person.firstName = "Yash";
+        // person.lastName = "Soni";
+        // person.age = 20;
+        // console.log(person);
+        
+
+        /*
+        //Properties
+        let hotel = new Object();
+
+        hotel.name = "Yash Da Dhaba";
+        hotel["rooms"] = 100;
+        var propName = "bookedRooms";
+        hotel[propName] = 50;
+        hotel.typeofFood = ["Indian", "Chinese", "Italian", "Mexican", "Punjabi"];
+
+        console.log(hotel);
+
+        //print all properties of object
+        for (let h in hotel) {
+            console.log(h);
+        }
+
+        //delete property
+        delete hotel.bookedRooms;
+        console.log(hotel);
+        */
+
+        let yash = {
+            firstName: "Yash",
+            lastName: "Soni",
+            age: 20,
+            isAdult: true,
+            address: {
+                street: "123 Street",
+                city: "Ahmedabad",
+                state: "Gujarat"
+            },
+            hobbies: ["Music", "Cricket", "Reading"],
+            greet: function() {
+                console.log("Hello, I am " + this.firstName + " " + this.lastName);
+            }
+        }
+
+        // console.log(yash.address.street);
+        // console.log(yash.address);
+        // console.log(yash.hobbies[2]);
+        // yash.greet()
+
+        // document.getElementById("demo").innerHTML = yash.firstName + " " + yash.lastName + " is " + yash.age + " years old.";
+
+        console.log(Object.values(yash));
+        console.log(Object.keys(yash));
+
+    </script>
+</body>
+</html>
+
+
+<!-- 
+JavaScript variables can also contain many values.
+
+Objects are variables too. But objects can contain many values.
+
+Object values are written as name : value pairs (name and value separated by a colon).
+
+
+ -->
