@@ -41,27 +41,77 @@
         // Displaying JS Objects using JSON.stringify() //this will convert the object into a string
         // document.getElementById('data').innerHTML = JSON.stringify(person);
 
-        const person = {
-            firstName: "Herry",
-            lastName: "Patel",
-            age: 19,
-            language: "",
-            get lang() {
-                return this.language;
-            },
-            set lang(value) {
-                this.language = value;
-            }
-        };
+        // const person = {
+        //     firstName: "Herry",
+        //     lastName: "Patel",
+        //     age: 19,
+        //     language: "",
+        //     get lang() {
+        //         return this.language;
+        //     },
+        //     set lang(value) {
+        //         this.language = value;
+        //     }
+        // };
 
-        person.language = ["English", "Hindi", "Gujarati"];
-        // document.getElementById('data').innerHTML = person.lang;
-        console.log(person.lang);
+        // person.language = ["English", "Hindi", "Gujarati"];
+        // // document.getElementById('data').innerHTML = person.lang;
+        // console.log(person.lang);
 
-        person.lang = ["C", "C++", "Java", "Python"];
-        // document.getElementById('data').innerHTML = person.lang;
-        console.log(person.lang);
+        // person.lang = ["C", "C++", "Java", "Python"];
+        // // document.getElementById('data').innerHTML = person.lang;
+        // console.log(person.lang);
 
+        // Object.defineProperty(person, "increaseAge", {
+        //     set : function(x) {this.age += x;}
+        // });
+
+        // Object.defineProperty(person, "decreaseAge", {
+        //     set : function(x) {this.age -= x;}
+        // });
+
+        // person.increaseAge = 5;
+        // // document.getElementById('data').innerHTML = person.age;
+        // console.log(person.age);
+
+        // person.decreaseAge = 2;
+        // // document.getElementById('data').innerHTML = person.age;
+        // console.log(person.age);
+
+
+        const obj = {counter: 0};
+
+        Object.defineProperty(obj, "reset", {
+            get : function() {this.counter = 0;}
+        })
+
+        Object.defineProperty(obj, "add", {
+            set : function(x) {this.counter += x;}
+        })
+
+        Object.defineProperty(obj, "multiply", {
+            set : function(x) {this.counter *= x;}
+        })
+
+        Object.defineProperty(obj, "divide", {
+            set : function(x) {this.counter /= x;}
+        })
+
+        Object.defineProperty(obj, "subtract", {
+            set : function(x) {this.counter -= x;}
+        })
+
+        obj.reset;
+        console.log("Counter: " + obj.counter);
+        obj.add = 5;
+        console.log("Counter: " + obj.counter);
+        obj.multiply = 3;
+        console.log("Counter: " + obj.counter);
+        obj.divide = 2;
+        console.log("Counter: " + obj.counter);
+        obj.subtract = 1;
+        console.log("Counter: " + obj.counter);
+        
     </script>
 </body>
 </html>
