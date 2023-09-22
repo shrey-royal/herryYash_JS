@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying JS Objects</title>
+    <style>
+        #data {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <p id="data"></p>
+
+    <script>
+        // const person = {
+        //     firstName: "Herry",
+        //     lastName: "Patel",
+        //     age: 19,
+        //     eyeColor: "black"   // last property does not have a comma
+        // };
+
+        // Displaying JS Objects using property names
+        // document.getElementById('data').innerHTML = person.firstName + " " + person.lastName + " is " + person.age + " years old.";
+
+        // Displaying JS Objects in a loop
+        // let text = "";  // empty string
+        // for (let x in person) {
+        //     text += person[x] + ", ";
+        // };
+        // document.getElementById('data').innerHTML = text;
+
+        // Displaying JS Objects using Object.values()
+        // const myArray = Object.values(person);
+        // document.getElementById('data').innerHTML = myArray
+        // console.log(myArray);
+
+        // Displaying JS Objects using JSON.stringify() //this will convert the object into a string
+        // document.getElementById('data').innerHTML = JSON.stringify(person);
+
+        const person = {
+            firstName: "Herry",
+            lastName: "Patel",
+            age: 19,
+            language: "",
+            get lang() {
+                return this.language;
+            },
+            set lang(value) {
+                this.language = value;
+            }
+        };
+
+        person.language = ["English", "Hindi", "Gujarati"];
+        // document.getElementById('data').innerHTML = person.lang;
+        console.log(person.lang);
+
+        person.lang = ["C", "C++", "Java", "Python"];
+        // document.getElementById('data').innerHTML = person.lang;
+        console.log(person.lang);
+
+    </script>
+</body>
+</html>
