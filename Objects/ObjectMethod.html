@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <script>
+        const person = {
+            greet: function() {
+                console.log(`Hello, my name is ${this.name}`);  //`Hello, my name is ${this.name}` is a template literal
+            }
+        }
+
+        var john = Object.create(person);   //Object.create() creates a new object, using an existing object as the prototype of the newly created object.
+        john.name = "John";
+        john.greet();
+
+
+        const car = {}; // Create an empty object
+        Object.defineProperty(car, 'color', {
+            value: 'blue',
+            writable: false, // Cannot be changed
+            configurable: false // Cannot be deleted or reconfigured
+        });
+
+        car.color = 'red'; // This won't change the color
+        delete car.color; // This won't delete the property
+
+        console.log(car.color); // blue
+
+        const book = {};
+        Object.defineProperties(book, {
+            title: {
+                value: 'The Great Gatsby',
+                writable: true,
+            },
+            author: {
+                value: 'F. Scott Fitzgerald',
+                writable: true,
+            }
+        });
+
+        // book.title = 'To Kill a Mockingbird';
+        // book.author = 'Harper Lee';
+        console.log(book);
+    </script>
+</body>
+</html>

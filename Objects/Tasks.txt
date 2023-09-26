@@ -1,0 +1,39 @@
+1. Prototype Inheritance Challenge:
+
+   You have an object named `person` with a `greet` method, and another object named `john` created using `Object.create(person)`. Implement a new object `jane` also derived from `person`, and make Jane greet herself with her name, which is "Jane."
+
+2. Property Configuration Challenge:
+
+   You have an object named `car` with a read-only and non-configurable property `color`. Create a function that attempts to change the color of the car and another function that tries to delete the color property. Test and explain the results.
+
+3. Define Multiple Properties Challenge:
+
+   Create an object named `book` and define properties for its `title` and `author` using `Object.defineProperties`. Then, create a function that attempts to update both the title and author of the book. Examine the outcome and explain why it works or doesn't work.
+
+4. Object Constructor Challenge:
+
+   Utilizing the object constructor function `person`, create a new instance called `p3` with the name "Sam," age 30, and color "green." Then, create a function that modifies Sam's language to "Spanish." Finally, display the properties of `p3` to confirm the changes.
+
+5. Constructor Instance Comparison Challenge:
+
+   Compare two instances of the `person` constructor, `p1` and `p2`, and check if they are equal using a conditional statement. If they are equal, print a message indicating they are the same person; otherwise, display a message stating they are different individuals.
+
+6. Object Prototype Challenge:
+
+   Define a new method called `introduce` within the `person` constructor that prints an introduction message including the person's name, age, and language. Then, invoke this method for `p1` and `p2` to introduce themselves.
+
+7. Dynamic Property Challenge:
+
+   Implement a function that allows the addition of a new property, such as "hobby," to any `person` instance. Add a hobby to `p1` and `p2`, and then display their updated information.
+
+8. Property Enumeration Challenge:
+
+   Create a loop that iterates through all the properties of the `p1` object and prints each property and its corresponding value.
+
+9. Conditional Property Configuration Challenge:
+
+   Modify the `person` constructor to accept an additional parameter, `canChangeColor`, which is either `true` or `false`. Depending on the value of this parameter, make the `color` property writable or non-writable for the person instance. Create a person with the ability to change the color and another without this ability, then attempt to change their colors to observe the results.
+
+10. Object Constructor Inheritance Challenge:
+
+    Create a new object constructor called `student` that inherits properties and methods from the `person` constructor. Add additional properties such as "grade" and "school" specific to students. Create a student instance, set their grade and school, and display their information along with their inherited properties.
