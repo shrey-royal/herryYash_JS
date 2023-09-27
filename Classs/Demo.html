@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Demo</title>
+    <style>
+        #header {
+            color: orangered;
+            text-align: center;
+            text-decoration: underline wavy orange;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">This is Header</h1>
+    <script>
+        class Calculator {
+            constructor(a, b) {
+                this.a = a
+                this.b = b
+            }
+
+            add() {
+                return this.a + this.b
+            }
+
+            sub() {
+                return this.a - this.b
+            }
+
+            mul() {
+                return this.a * this.b
+            }
+
+            div() {
+                return this.a / this.b
+            }
+
+            mod() {
+                return this.a % this.b
+            }
+        }
+        
+        var a = parseInt(prompt("Enter the value of a: "))
+        var b = parseInt(prompt("Enter the value of b: "))
+
+        var calc = new Calculator(a, b)
+        console.log(calc.add())
+        console.log(calc.sub())
+        console.log(calc.mul())
+        console.log(calc.div())
+        console.log(calc.mod())
+
+    </script>
+</body>
+</html>
+
+<!--
+Problem Statement 1: Building a Shape Hierarchy
+
+You are tasked with building a hierarchy of geometric shapes using classes and inheritance in JavaScript. You should create a base class called 'Shape' and then derive three subclasses: 'Circle', 'Rectangle', and 'Triangle'. Each subclass should have its own properties (e.g., radius for 'Circle', length and width for 'Rectangle', base and height for 'Triangle') and methods to calculate the area and perimeter for the respective shape.
+
+Your code should demonstrate proper class inheritance and encapsulation, and it should allow for the creation and manipulation of objects representing these shapes.
+
+Problem Statement 2: Implementing a Bank Account System
+
+You are working on developing a bank account system in JavaScript. Implement a base class called 'BankAccount' with properties like 'accountNumber', 'accountHolderName', and 'balance'. Then, create two subclasses: 'SavingsAccount' and 'CheckingAccount'.
+
+- 'SavingsAccount' should have additional properties like 'interestRate' and methods for calculating interest earned.
+- 'CheckingAccount' should have methods for processing checks and handling overdrafts.
+
+Ensure that both subclasses inherit common properties and behaviors from the 'BankAccount' base class while also having their specific functionality.
+
+Your code should allow for creating and managing bank accounts, depositing and withdrawing money, and performing other relevant operations on these accounts.
+
+
+-->

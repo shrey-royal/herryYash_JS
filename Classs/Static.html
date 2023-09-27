@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name
+            }
+
+            static hello(x) {
+                return `Hello, I am a ${x.name}`
+            }
+        }
+
+        const ppl = new Person("John")
+        // console.log(ppl.hello())
+
+        console.log(Person.hello(ppl))
+    </script>
+</body>
+</html>

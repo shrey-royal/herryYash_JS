@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(brand) {
+                this.carname = brand
+            }
+
+            present() {
+                return `I have a ${this.carname}`
+            }
+
+            get cname() {
+                return this.carname
+            }
+
+            set cname(carname) {
+                this.carname = carname
+            }
+        }
+
+        class Model extends Car {
+            constructor (brand, model) {
+                super(brand)    // super() method refers to the parent class
+                this.model = model
+            }
+
+            show() {
+                return `${this.present()}, it is a ${this.model}`
+            }
+        }
+
+        let myCar = new Model("Ford", "Mustang")
+        console.log(myCar.show())
+
+        myCar.cname = "BMW"
+        console.log(myCar.cname);
+
+
+
+    </script>
+</body>
+</html>
