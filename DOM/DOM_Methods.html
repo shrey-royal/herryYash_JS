@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Methods</title>
+</head>
+<body>
+    <p id="demo">This is p</p>
+    <p class="demo1">This is p1</p>
+    <h2 class="demo1">This is p2</h2>
+    <a id="link" href="https://www.youtube.com" style="color: orangered; font: 70px bold; text-decoration: none;">Youtube</a>
+    
+    
+    
+    <script>
+        //finding the html elements
+        // document.getElementById("demo").innerHTML = "Hello World!";
+        // document.getElementsByClassName("demo1")[0].innerHTML = "class demo1[0]";
+        // document.getElementsByClassName("demo1")[1].innerHTML = "class demo1[1]";
+        // document.getElementsByTagName("p")[0].innerHTML = "p tag";
+
+        //changing the html elements
+        // element.innerHTML =  new html content
+        // document.getElementById("demo").innerHTML = "Hello World!";
+
+        //element.attribute = new value
+        // document.getElementById("link").attributes[1].value = "https://www.google.com";
+
+        //element.style.attribute = new style
+        // document.getElementById("link").style.color = "limegreen";
+        
+        //element.setAttribute(attribute, value)
+        // document.getElementById("link").setAttribute("href", "https://www.google.com");
+
+        //adding and deleting elements
+        // document.createElement(element)
+        var header = document.createElement("h3");
+        header.textContent = "This is H3";
+        document.body.appendChild(header);
+
+        var removeEle = document.getElementsByClassName("demo1")[0];
+        removeEle.parentNode.removeChild(removeEle);
+
+        // var p1 = document.getElementById("demo");
+        // p1.textContent = "This is p1";
+
+        var p2 = document.getElementById("demo");
+        p2.replaceChild(header, p2.childNodes[0]);
+
+        document.write("<br><br>This is document.write()");
+
+
+
+    </script>
+</body>
+</html>

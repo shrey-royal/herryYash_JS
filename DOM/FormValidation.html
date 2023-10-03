@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <form name="myForm" onsubmit="return validateForm()" method="post" target="_blank">
+        Name: <input type="text" name="fname"><span></span><h3 id="nameError"></h3><br>
+        Email: <input type="text" name="email"><span></span><h3 id="emailError"></h3><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            let y = document.forms["myForm"]["email"].value;
+            flag = true;
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            
+            if (x == '') {
+                // alert("Name must be filled out");
+                document.getElementById("nameError").innerHTML = "Name must be filled out";
+                document.getElementById("nameError").style.color = "red";
+                console.log("Name Error");
+                flag = false;
+            }
+            if (y == '') {
+                // alert("Email must be filled out");
+                document.getElementById("emailError").innerHTML = "Email must be filled out";
+                document.getElementById("emailError").style.color = "red";
+                console.log("Email Error");
+                flag = false;
+            }
+            return flag;
+        }
+    </script>
+</body>
+</html>
