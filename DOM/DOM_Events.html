@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        #one:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #two:hover {
+            color: blueviolet;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="this.innerHTML = 'SURPRISE!!!'" id="one">Click here!!!</h1>
+
+    <h1 onclick="changeText(this)" id="two">Click here instead!!!</h1>
+
+    <h1 id="three" onmouseenter="changeColor(this)" onmouseleave="defaultColor(this)">Change color on mouse hover</h1>
+    <h3 id="output">here you can see the mouse actions</h3>
+    
+    
+    <script>
+        function changeText(id) {
+            document.getElementById("two").style.color = "blue";
+            id.innerHTML = "Herry Potter(Patel) of Gandhinagar District!!!";
+        }
+
+        function changeColor(id) {
+            id.style.color = "orange";
+            document.getElementById("output").innerHTML = "Mouse entered!!!";
+        }
+
+        function defaultColor(id) {
+            id.style.color = "black";
+            console.log("Mouse left!!!");
+            document.getElementById("output").innerHTML = "Mouse left!!!";
+        }
+    </script>
+</body>
+</html>

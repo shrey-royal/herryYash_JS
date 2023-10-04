@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_EventListeners</title>
+</head>
+<body>
+    <button id="btn">Enable Dark Theme</button>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", myFunction);
+
+        function myFunction() {
+            if(document.body.style.backgroundColor == "black") {
+                console.log("White Theme Enabled!!!");
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                document.getElementById("demo").innerHTML = "White Theme Enabled!!!";  
+            } else {
+                console.log("Dark Theme Enabled!!!");
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                document.getElementById("demo").innerHTML = "Dark Theme Enabled!!!";
+            }
+        }
+    </script>
+</body>
+</html>
