@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Format</title>
+</head>
+<body>
+    <script>
+        console.log("JSON Format");
+        
+        let person = {
+            "name": "John",
+            "age": 31,
+            "city": "New York"
+        }
+        console.log(person);
+
+        var stringJSON = JSON.stringify(person)
+        console.log(stringJSON);
+
+        var parseJSON = JSON.parse(stringJSON)
+        console.log(parseJSON);
+
+    </script>
+</body>
+</html>
+
+
+<!-- 
+What is JSON Format?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is language independent *
+
+
+format of JSON:
+
+let person = {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+}
+
+JSON mainly have 2 methods:
+    1. JSON.stringify() - convert a JavaScript object into a string
+    2. JSON.parse() - convert a JSON string into a JavaScript object
+
+
+ -->
