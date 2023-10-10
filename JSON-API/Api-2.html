@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api-2</title>
+    <style>
+        #table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <input type="number" id="start">
+        <input type="number" id="end">
+        <button onclick="getPhotos()">Get Photos</button>
+    </div>
+    <br>
+    <table id="table" align="center" border="1">
+        <tr>
+            <th>albumId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>url</th>
+            <th>thumbnailUrl</th>
+        </tr>
+
+        <!-- <tr>
+            <td id="albumId"></td>
+            <td id="id"></td>
+            <td id="title"></td>
+            <td><img id="url"></td>
+            <td><img id="thumbnailUrl"></td>
+        </tr> -->
+    </table>
+
+    <script>
+        // var table = document.getElementById("table");
+        // var albumId = document.getElementById("albumId");
+        // var id = document.getElementById("id");
+        // var title = document.getElementById("title");
+        // var url = document.getElementById("url");
+        // var thumbnailUrl = document.getElementById("thumbnailUrl");
+
+        // fetch("https://jsonplaceholder.typicode.com/photos/1")
+        // .then((response) => response.json())
+        // .then((json) => {
+        //     albumId.innerHTML = json.albumId;
+        //     id.innerHTML = json.id;
+        //     title.innerHTML = json.title;
+        //     url.src = json.url;
+        //     thumbnailUrl.src = json.thumbnailUrl;
+        // });
+
+        // fetch("https://jsonplaceholder.typicode.com/photos/1")
+        // .then((response) => response.json())
+        // .then((json) => {
+        //     document.write("albumId: " + json.albumId + "<br>");
+        //     document.write("id: " + json.id + "<br>");
+        //     document.write("title: " + json.title + "<br>");
+        //     document.write("url: " + json.url + "<br>");
+        //     document.write("thumbnailUrl: " + json.thumbnailUrl + "<br>");
+        // })
+
+
+
+        //For Multiple Rows
+        var table = document.getElementById("table");
+
+        function getPhotos() {
+            var start = document.getElementById("start").value;
+            var end = document.getElementById("end").value;
+
+            if(start == "" || end == "") {
+                alert("Please enter start and end values");
+                return;
+            }
+
+            if(start < 1 || start > 5000 || end < 1 || end > 5000) {
+                alert("Please enter values between 1 and 5000");
+                return;
+            }
+
+            if(start > end) {
+                alert("Start value should be less than end value");
+                return;
+            }
+
+            var photoIDs = [];
+
+            for(var i = start; i <= end; i++) {
+                photoIDs.push(i);
+            }
+
+            photoIDs.forEach(function(photoId) {
+                fetch("https://jsonplaceholder.typicode.com/photos/" + photoId)
+                .then((response) => response.json())
+                .then((json) => {
+                    var row = table.insertRow();
+                    var userIdCell = row.insertCell(0);
+                    var idCell = row.insertCell(1);
+                    var titleCell = row.insertCell(2);
+                    var urlCell = row.insertCell(3);
+                    var thumbnailUrlCell = row.insertCell(4);
+
+                    userIdCell.innerHTML = json.albumId;
+                    idCell.innerHTML = json.id;
+                    titleCell.innerHTML = json.title;
+
+                    var urlImage = document.createElement("img");
+                    var thumbnailUrlImage = document.createElement("img");
+
+                    urlImage.src = json.url;
+                    thumbnailUrlImage.src = json.thumbnailUrl;
+
+                    urlCell.appendChild(urlImage);
+                    thumbnailUrlCell.appendChild(thumbnailUrlImage);
+                })
+            })
+        }
+    </script>
+</body>
+</html>
